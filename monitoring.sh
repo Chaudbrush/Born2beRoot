@@ -37,6 +37,7 @@ then
 else
         printf "#LVM use: yes\n"
 fi
+
 ctcp=$(ss -t -a | grep -c ESTAB)
 printf "#Connections TCP: $ctcp %s\n" "ESTABLISHED"
 

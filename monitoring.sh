@@ -31,9 +31,9 @@ boot=$(who -b | awk '{print $3" "$4}')
 printf "#Last boot: $boot\n"
 
 lvm=$(lsblk | grep "lvm" | wc -l)
-if [ $lvm -gt 0 ]
+if [ $lvm -eq 0 ]
 then
-        printf "#LVM use: yes\n"
+        printf "#LVM use: no\n"
 else
         printf "#LVM use: yes\n"
 fi
@@ -44,13 +44,10 @@ printf "#Connections TCP: $ctcp %s\n" "ESTABLISHED"
 usr=$(users | wc -w)
 printf "#User log: $usr\n"
 
-#ip=$(hostname -I | awk '{print $1}')
-ip2=$(ip address | grep "enp" | grep "inet" | awk '{print $2}' | cut -d / -f1)
+ip=$(hostname -I | awk '{print $1}')
+#ip2=$(ip address | grep "enp" | grep "inet" | awk '{print $2}' | cut -d / -f1)
 mac=$(ip address | grep "ether" | awk '{print $2}')
 printf "#Network: IP $ip ($mac)\n"
 
-#sudo=$(cat /var/log/sudo/sudo.log | grep COMMAND | wc -l)
-#printf "Sudo: $sudo\n"
-
-sudo=$(cat /var/log/sudo/seq)
-printf "Sudo: %d\n" "$sudo"
+sudo=$(cat /var/log/sudo/sudo.log | grep COMMAND | wc -l)
+printf "Sudo: $sudo\n"

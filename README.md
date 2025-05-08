@@ -106,6 +106,15 @@
 
 ---
 
+### Signature
+
+  - turn off your VM
+  - open your Terminal, go to the VM folder (~/sgoinfre/Born2beRoot)
+  - shasum orn2beRoot.vdi
+  - copy and save it in a .txt `c9af2694e4bc28d1403e307a3407c47c9f489489`
+
+---
+
 ### Best References
 
   - [lbordonal](https://github.com/lbordonal/01-Born2beroot/wiki)

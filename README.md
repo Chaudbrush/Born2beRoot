@@ -105,6 +105,12 @@
   - the script need to sue wall to send it to all terminals, you can use wall in your script, or pipe it to wall in the crontab
   - this is my current [monitoring.sh](https://github.com/Chaudbrush/Born2beRoot/blob/main/monitoring.sh)
 
+### Script on Reboot
+
+  - No solution yet
+  - `@reboot`on crontab doesn't work
+  - [try this](https://bugs.debian.org/cgi-bin/bugreport.cgi?att=0;bug=635473;msg=70)
+  - [try this](https://github.com/HEADLIGHTER/Born2BeRoot-42/blob/main/rebootfix.txt)
 ---
 
 ### Signature

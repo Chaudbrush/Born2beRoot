@@ -15,10 +15,11 @@
 ### Connect to SSH
 
   - `sudo apt-get install openssh-server`
+  - `sudo systemctl status ssh` or `sudo service sshd status` to check status
   - `sudo vim /etc/ssh/sshd_config`
   - Remove comment from `#Port22` and change it to `Port4242`
   - Recome comment from `#PermitRootLogin` and change it to `PermitRootLogin no`
-  - Two commands to ssh `sudo systemctl restart ssh` and `sudo systemctl status ssh`
+  - `sudo systemctl restart ssh` to restart ssh after the changes
 
 ---
 
@@ -30,6 +31,8 @@
   - `sudo ufw status numbered` (show status of ufw and allowed ports)
   - `sudo ufw allow 4242` (allow port 4242)
   - `sudo ufw delete <port_number>`(to delete an allowed port)
+  - `sudo ufw delete allow 8080` delete everything from the allow (both instances)
+  - `sudo ufw deny 8080` (deny port 8080)
 
 ---
 
@@ -70,6 +73,7 @@
   - `difok=7` (password must have at least 7 different characters from last password)
   - `reject_username` (no username allowed on password)
   - `enforce_for_root` (add the rule to root user as well)
+  - `sudo reboot` for changes to take effect
 
 --- 
 

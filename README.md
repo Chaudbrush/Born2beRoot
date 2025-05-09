@@ -7,6 +7,8 @@
   - `apt-get update -y`
   - `apt-get upgrade -y`
   - `apt-get install sudo`
+  - `sudo apt-get install git`
+  - `sudo apt-get install vim`
 
 ---
 

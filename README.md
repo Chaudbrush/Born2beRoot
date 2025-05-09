@@ -42,7 +42,7 @@
 ### Arranging Groups
 
   - use `groupadd user42` (to create a group named "user42")
-  - `usermod -aG sudo,user42 <username>` (to add your user to both groups)
+  - `sudo usermod -aG sudo,user42 <username>` (to add your user to both groups)
   - `getent group sudo` or `getent group user42` (to check who is in the group)
 
 ---

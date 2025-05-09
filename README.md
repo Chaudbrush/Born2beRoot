@@ -3,7 +3,7 @@
 ### First things to setup and sudo install
 
   - `lsblk`on terminal to see partitions
-  - `login as root or use su to enter as root`
+  - `login as root or use 'su -' to enter as root`
   - `apt-get update -y`
   - `apt-get upgrade -y`
   - `apt-get install sudo`

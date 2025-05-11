@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    monitoring.sh                                      :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/05/11 13:15:39 by vloureir          #+#    #+#              #
+#    Updated: 2025/05/11 13:15:52 by vloureir         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #!/bin/bash
 
 arch=$(uname -a)
@@ -17,14 +29,9 @@ printf "#Memory Usage: $uram/$fram%s (%.2f%%)\n" "MB" "$pram"
 sdisk=$(df -h --total | awk END'{print $2}' | cut -d G -f1)
 udisk=$(df -h --total | awk END'{print $3}' | cut -d G -f1)
 pdisk=$(df -h --total | awk END'{print $3/$2 * 100}')
-printf "#Disk Usage: %.1f/%.1fGb (%.2f%%)\n" "$udisk" "$sdisk" "$pdisk"
+printf "#Disk Usage: $udisk/$sdisk%s (%.2f%%)\n" "Gb" "$pdisk"
 
-#cmd1=$(mpstat | tail -n 1 | awk '{print $4}')
-#cmd2=$(mpstat | tail -n 1 | awk '{print $6}')
-#cmd3=$(echo "$cmd1 + $cmd2" | bc)
-#printf "#CPU load: $cmd3%%\n"
-
-cpul=$(mpstat | tail -1 | awk '{print $4 + $6}')
+cpul=$(mpstat | tail -n 1 | awk '{print $4 + $6}')
 printf "#CPU load: %.1f%%\n" "$cpul"
 
 boot=$(who -b | awk '{print $3" "$4}')
@@ -38,16 +45,15 @@ else
         printf "#LVM use: yes\n"
 fi
 
-ctcp=$(ss -t -a | grep -c ESTAB)
+ctcp=$(ss | grep "tcp" | wc -l)
 printf "#Connections TCP: $ctcp %s\n" "ESTABLISHED"
 
 usr=$(users | wc -w)
 printf "#User log: $usr\n"
 
 ip=$(hostname -I | awk '{print $1}')
-#ip2=$(ip address | grep "enp" | grep "inet" | awk '{print $2}' | cut -d / -f1)
 mac=$(ip address | grep "ether" | awk '{print $2}')
 printf "#Network: IP $ip ($mac)\n"
 
-sudo=$(cat /var/log/sudo/sudo.log | grep COMMAND | wc -l)
-printf "Sudo: $sudo\n"
+sudo=$(cat /var/log/sudo/sudo.log | grep "COMMAND" | wc -l)
+printf "#Sudo: $sudo\n"

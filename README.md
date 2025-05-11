@@ -38,8 +38,9 @@
 
 ### Connect to the VM via Terminal
 
-  - in the VM use `hostname -I` to get your IP
   - go to the VM Box, Settings, Network, change NAT to Bridged Adapter
+  - `sudo reboot` to reboot the VM
+  - in the VM use `hostname -I` to get your IP
   - in the Terminal, type `ssh <username>@<VM IP> -p 4242`
 
 ---
@@ -73,7 +74,7 @@
   - `difok=7` (password must have at least 7 different characters from last password)
   - `reject_username` (no username allowed on password)
   - `enforce_for_root` (add the rule to root user as well)
-  - `sudo reboot` for changes to take effect
+  - `sudo reboot` to reboot the VM
 
 --- 
 

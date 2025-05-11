@@ -53,6 +53,16 @@
 
 ---
 
+### Creating sudo.log
+
+  - `cd /var/log`
+  - `mkdir sudo`
+  - `cd sudo`
+  - `touch sudo.log`
+  - `chmod 644 sudo.log`
+
+---
+
 ### Password Max and Min Days
 
   - `sudo vim /etc/login.defs` go to line 165, or search for PASS_MAX_DAYS
@@ -109,7 +119,10 @@
 ### Monitoring script
 
   - first we need to install two things `sudo apt-get install bc sysstat`
-  - the script need to sue wall to send it to all terminals, you can use wall in your script, or pipe it to wall in the crontab
+  - the script need to use wall to send it to all terminals, you can use wall in your script, or pipe it to wall in the crontab
+  - `cd /usr/local/bin`
+  - `vim monitoring.sh`
+  - `chmod 755 monitoring.sh`
   - this is my current [monitoring.sh](https://github.com/Chaudbrush/Born2beRoot/blob/main/monitoring.sh)
 
 ### Script on Reboot

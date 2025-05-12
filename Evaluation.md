@@ -92,4 +92,4 @@
   - `ss` shows socket statistics, we search for tcp connections and print it
   - `users` show users logged to the machine, `wc -w` count words
   - `hostname -I` gives us the IP, and with `ip address` we get the MAC address
-  - `we cat the sudo.log, grep it to just get the ammount of commands executed and print the line count 
+  - `cat sudo.log`, grep it to just get the ammount of commands executed and print the line count 

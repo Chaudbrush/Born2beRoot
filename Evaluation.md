@@ -85,7 +85,7 @@
   - `uname -a` just prints system information -a mean `--all`
   - `/proc/cpuinfo`has the info for the cpu processors and we're just sorting and selecting the data into lines, and printing line count
   - `free -m` display amount of free and used memory, then qwe simply print the correct collum with awk, -m shows in megabytes
-  - `df` df just shows the ammount of space available on the system, -h just parse the information into "human readable", pritns in power of 1024, --total creates a new row with the total amount
+  - `df` df just shows the ammount of space available on the system, -h just parse the information into "human readable", prints in power of 1024, --total creates a new row with the total amount
   - `mpstat` shows processor related statistics, we take the last line and print the fiels which are being used by us
   - `who -b` who show who is logged in, -b flag is for last system boot
   - `lsblk` shows block devices, then we just check if there is lvm in there

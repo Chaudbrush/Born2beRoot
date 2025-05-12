@@ -25,7 +25,7 @@
 
 ### Install UFW (Uncomplicated Firewall)
 
-  - `sudo spt-get install ufw`
+  - `sudo apt-get install ufw`
   - `sudo ufw enable` (to turn it on)
   - `sudo ufw disable` (to turn if off)
   - `sudo ufw status numbered` (show status of ufw and allowed ports)

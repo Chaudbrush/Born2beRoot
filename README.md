@@ -142,10 +142,16 @@
 
 ---
 
-### Best References
+### Best Guide References
 
   - [lbordonal](https://github.com/lbordonal/01-Born2beroot/wiki)
   - [Thuggonaut](https://github.com/Thuggonaut/42IC_Ring01_Born2beRoot)
   - [chlimous](https://github.com/chlimous/42-born2beroot_guide/tree/main)
   - [yasmineww](https://github.com/yasmineww/Born2beRoot/tree/main)
   - [HEADLIGHTER](https://github.com/HEADLIGHTER/Born2BeRoot-42/tree/main)
+  - [Marymota](https://github.com/Marymota/born2beroot/blob/main/born2beroot.png)
+
+### Best Research Reference
+
+  - [miro.com](https://miro.com/app/board/uXjVLzBvyb8=/)
+  - [48d31kh413k](https://github.com/48d31kh413k/1337-Born2beRoot-42)

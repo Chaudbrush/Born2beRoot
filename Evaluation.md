@@ -10,6 +10,14 @@
 
 ---
 
+### Graphcial Interface
+
+  - if asked, you can prove you don't have any graphical interface with `ls /usr/bin/*session`
+  - if the output is `/usr/bin/dbus-run-session` or `/usr/bin/byobu-select-session` there is none installed
+  - if the output is something like `/usr/bin/gnome-session` or `/usr/bin/pipewire-media-session` there is one installed
+
+---
+
 ### Check SSH
 
   - `sudo systemctl status ssh` or `sudo service sshd status` to check status

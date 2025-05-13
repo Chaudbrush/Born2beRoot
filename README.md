@@ -99,8 +99,8 @@
   - `Defaults  log_input`
   - `Defaults  log_output`
   - `Defaults  requiretty`
-  - go to the line where there is `root  ALL(ALL:ALL) ALL
-  - put bellow it `<username>  ALL(ALL:ALL) ALL
+  - go to the line where there is `root  ALL(ALL:ALL) ALL`
+  - put bellow it `<username>  ALL(ALL:ALL) ALL`
 
 ---
 

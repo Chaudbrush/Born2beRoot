@@ -31,7 +31,7 @@ udisk=$(df -h --total | awk END'{print $3}' | cut -d G -f1)
 pdisk=$(df -h --total | awk END'{print $3/$2 * 100}')
 printf "#Disk Usage: $udisk/$sdisk%s (%.2f%%)\n" "Gb" "$pdisk"
 
-cpul=$(mpstat | tail -n 1 | awk '{print $4 + $6}')
+cpul=$(mpstat | tail -n 1 | awk '{print 100-$NF}')
 printf "#CPU load: %.1f%%\n" "$cpul"
 
 boot=$(who -b | awk '{print $3" "$4}')

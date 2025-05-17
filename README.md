@@ -1,5 +1,10 @@
 # Born2beRoot
 
+### Notes
+- The aim of this project is to teach us how to configure our own Server through a Virtual Machine
+- This is just my personal notes on which steps I did to configure my Virtual Machine
+- I was doing all the initial config as root, if you don't do it as root, you need to edit sudoers and add yourself to sudo group as one of the first steps
+
 ### First things to setup and sudo install
 
   - `lsblk`on terminal to see partitions

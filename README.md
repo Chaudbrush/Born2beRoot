@@ -82,7 +82,7 @@
 ### Password Quality
 
   - `sudo apt-get install libpam-pwquality`
-  - In `sudo vim /etc/pamn.d/common-password` you need to add a few commands after `retry=3`:
+  - In `sudo vim /etc/pam.d/common-password` you need to add a few commands after `retry=3`:
   - `maxrepeat=3` (maximum of 3 characters can be repeated in a row)
   - `minlen=10` (minimum 10 characters on the password)
   - `ucredit=-1 lcredit=-1 dcredit=-1` (to force at least one uppercase, lowercase and digit in password)

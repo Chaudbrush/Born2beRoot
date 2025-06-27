@@ -51,7 +51,7 @@
 
   - `sudo vim /etc/login.defs` go to line 165, or search for PASS_MAX_DAYS
   - use `chage -l <username>` to check if both <username> and root have the 30 MAX and 2 MIN set
-  - In `sudo vim /etc/pamn.d/common-password` check show that all the password rules are there
+  - In `sudo vim /etc/pam.d/common-password` check show that all the password rules are there
   - `maxrepeat=3` (maximum of 3 characters can be repeated in a row)
   - `minlen=10` (minimum 10 characters on the password)
   - `ucredit=-1 lcredit=-1 dcredit=-1` (to force at least one uppercase, lowercase and digit in password)

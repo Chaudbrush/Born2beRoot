@@ -67,7 +67,7 @@
   - `Defaults  badpass_message="Wrong Password!"`
   - `Defaults  passwd_tries=3`
   - `Defaults  iolog_dir="/var/log/sudo"`
-  - `Defaults  logfile="/var/log/sudo/sudo.logs"`
+  - `Defaults  logfile="/var/log/sudo/sudo.log"`
   - `Defaults  log_input`
   - `Defaults  log_output`
   - `Defaults  requiretty`
